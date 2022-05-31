@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xxl-10 offset-xxl-1" style="box-shadow: 0px 0px;">
+                    <h1>Upload file</h1>
+                    <form method="post" enctype="multipart/form-data">
+
+                    {% csrf_token %}
+                        <small class="form-text">Choose file to upload. If you want to upload multiple files on one subject please consider to zip it. We need to keep our&nbsp; f i l e v a u l t&nbsp; clean and organised.</small>
+                            {{ form.url|as_crispy_field }}
+                        <small class="form-text">No one will know you did. No one will able to thank you :(</small>
+                        {{ form.is_anonymous|as_crispy_field }}
+                        <small class="form-text">Please select subject which is file will be attached to</small>
+                        {{  form.subject|as_crispy_field }}
+                        <small class="form-text">Choose year from which your materials is</small>
+                         <div class="input-group" style="padding: 10px;"><span class="input-group-text">Year</span><select class="form-select" id="years" name="year">
+                                    {% for year in yearlist %}
+                                        <option value="{{ year }}">{{ year }}</option>
+                                    {% endfor %}
+                         </select></div>
+                        <small class="form-text">Please, type in brief description what you are uploading. Good example: "Seminarní práce" or "Domací úkol 3" or "pulsemistranlí test".</small>
+                        {{ form.description|as_crispy_field }}
+                        <small class="form-text">Separated by comma. Good example: "zkouška, zima, varianta b, vyřešené, 3. termin" etc. To read more about tagging please refer to the FAQ page.</small>
+                        {{  form.tags|as_crispy_field }}
+                        <div class="form-check" style="text-align: left;padding: 10px 10px 10px 24px;"><input class="form-check-input doublecheck" type="checkbox" id="formCheck-2" name="verify" required><label class="form-check-label" for="formCheck-2" style="text-align: left;transform: perspective(0px);">I've double-checked my data and I confirm that I carefully filled all required fileds.&nbsp;&nbsp;</label></div>
+                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+id;Name;Short name;Faculty;language;Sem.
+500061;Anglický jazyk pro informatiky;AJAI;2;Česky;1
+500062;Diskrétní struktury;DS;2;Česky;1
+500104;Efektivní komunikace a prezentace;EKP;2;Česky;1
+500068;Fundamentals of Structural Programming;ZSPa;2;Anglicky;1
+500065;Introduction into Computer Networks;PS1a;2;Anglicky;1
+335;Matematický seminář;MAS1P;2;Česky;1
+500063;Matematika;MAT;2;Česky;1
+500070;Tvorba internetových stránek;TIS;2;Česky;1
+500064;Úvod do počítačových sítí;PS1;2;Česky;1
+500067;Základy strukturovaného programování;ZSP;2;Česky;1
+500299;Architektura počítačů;ARP;2;Česky;2
+500099;Ekonomika podniku;EP;2;Česky;2
+500072;Introduction into Database Systems;DB1a;2;Anglicky;2
+500098;Navazující odborná angličtina pro informatiky;NOAJI;2;Česky;2
+500074;Návrh uživatelských rozhraní;NUR;2;Česky;2
+500075;Objektově orientované programování;OOP;2;Česky;2
+500102;Pokročilejší technologie počítačových sítí;PTPS;2;Česky;2
+500076;Software Engineering;xSWIa;2;Anglicky;2
+1613;Softwarové inženýrství;xSWI;2;Česky;2
+500078;Statistika pro techniky;ST;2;Česky;2
+500071;Úvod do databázových systémů;DB1;2;Česky;2
+500054;Základy akademického psaní;ZAP;2;Česky;2
+500079;Datové struktury a algoritmy;DSA;2;Česky;3
+500100;Elektronické obchodování;EO;2;Česky;3
+1587;Multimedia;xMUMa;2;Anglicky;3
+500103;Multimédia;MUM;2;Česky;3
+500086;Programování technických výpočtů;PTV;2;Česky;3
+500087;Programování v Javě;PJ;2;Česky;3
+500080;Řízení softwarových projektů;RSP;2;Česky;3
+1612;Serverová a desktopová administrace;xSDA;2;Česky;3
+500101;Vývoj a provoz bezpilotních systémů;VPBS;2;Česky;3
+500088;Webové technologie;WT;2;Česky;3
+1571;Bezpečnost a ochrana dat;xBOD;2;Česky;4
+1589;Multimediální a studiová technika;xMST;2;Česky;4
+500090;Návrh a implementace databázových systémů;NIDB;2;Česky;4
+330;Operační systémy;OPS;2;Česky;4
+500092;Počítačová grafika a virtuální realita;PGVR;2;Česky;4
+500081;Podnikové informační systémy;PIS;2;Česky;4
+500082;Programming Languages and Compilers;PJPa;2;Anglicky;4
+1600;Programovací jazyky a překladače;xPJP;2;Česky;4
+1603;Programování desktopových aplikací;xPDA;2;Česky;4
+500089;Příprava na odbornou praxi;POP;2;Česky;4
+500041;Technologie a standardy Průmyslu 4.0;TSP_AI_BC;2;Česky;5
+500095;Artificial Intelligence;UIa;2;Anglicky;6
+1582;Geografické informační systémy;xGIS;2;Česky;6
+500093;Pokročilé programovací techniky;PPT;2;Česky;6
+1604;Programování pro mobilní platformy;xPMP;2;Česky;6
+500094;Umělá inteligence;UI;2;Česky;6
+1636;Zpracování signálu a obrazu;xZSO;2;Česky;6

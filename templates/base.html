@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    {% load static %}
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        {% block title %}<title>f i l e v a u l t</title>{% endblock %}
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Navbar-Right-Links.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bstreeview.min.css' %}">
+    <link href="{% static 'assets/fontawesome/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <!--link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"-->
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light navbar-expand-md py-3">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span>všpj.archives</span></a><button class="navbar-toggler" data-bs-toggle="collapse"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
+        </nav>
+    </header>
+  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+    {% comment %}
+    scripts. bootstrap, jquery
+    put jquery to local storage?
+    {% endcomment %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/bstreeview.min.js' %}"></script>
+    <script>
+    $(function () {
+
+      var json = {{ tree|safe }}
+
+      $('#tree').bstreeview({ data: json });
+
+    });
+  </script>
+</body>
+
+</html>

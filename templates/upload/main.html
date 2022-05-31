@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>archives</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Navbar-Right-Links.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light navbar-expand-md py-3">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span>všpj.archives</span></a><button class="navbar-toggler" data-bs-toggle="collapse"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
+        </nav>
+    </header>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xxl-10 offset-xxl-1" style="box-shadow: 0px 0px;">
+                    <h1>Upload file</h1>
+                    <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                        <small class="form-text">Choose file to upload. If you want to upload multiple files on one subject please consider to zip it. We need to keep our&nbsp; f i l e v a u l t&nbsp; clean and organised.</small>
+                        <div class="input-group" style="padding: 10px;"><input class="form-control" type="file" name="file"></div><small class="form-text">No one will know you did. No one will able to thank you :(</small>
+                        <div class="form-check" style="padding: 10px 10px 10px 24px;"><input class="form-check-input" type="checkbox" id="formCheck-1" name="anonymous"><label class="form-check-label" for="formCheck-1">Upload anonymously</label></div><small class="form-text">Please select subject which is file will be attached to</small>
+                        <div class="input-group" style="padding: 10px;"><span class="input-group-text">Subject</span><select class="form-select" name="subject">
+
+                            {% for subject in subjects %}
+                                    <option value="{{ subject.id }}">{{ subject.name }}</option>
+                            {% endfor %}
+
+
+                            </select></div><small class="form-text">Choose year from which your materials is</small>
+                        <div class="input-group" style="padding: 10px;"><span class="input-group-text">Year</span><select class="form-select" id="years" name="year">
+                                    {% for year in yearlist %}
+                                        <option value="{{ year }}">{{ year }}</option>
+                                    {% endfor %}
+                            </select></div>
+                        <div class="form-check" style="padding: 10px 10px 10px 24px;"><input class="form-check-input" type="checkbox" id="formCheck-3" name="noyear"><label class="form-check-label" for="formCheck-3">Year is unknown</label></div><small class="form-text">Please, type in brief description what you are uploading. Good example: "Seminarní práce" or "Domací úkol 3" or "pulsemistranlí test".</small>
+                        <div class="input-group" style="padding: 10px;"><span class="input-group-text">Description</span><input class="form-control" type="text" name="description"></div><small class="form-text">Separated by comma. Good example: "zkouška, zima, varianta b, vyřešené, 3. termin" etc. To read more about tagging please refer to the FAQ page.</small>
+                        <div class="input-group" style="padding: 10px;"><span class="input-group-text">Tags</span><input class="form-control" type="text" name="tags"></div>
+                        <div class="form-check" style="text-align: left;padding: 10px 10px 10px 24px;"><input class="form-check-input doublecheck" type="checkbox" id="formCheck-2" name="verify" required><label class="form-check-label" for="formCheck-2" style="text-align: left;transform: perspective(0px);">I've double-checked my data and I confirm that I carefully filled all required fileds.&nbsp;&nbsp;</label></div>
+                        <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
