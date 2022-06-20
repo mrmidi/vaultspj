@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure-^@4^^a=df18#u#ix!^3&($vw9z*%89l%f7ptj0o1b$06pf16vr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -129,14 +128,44 @@ USE_TZ = True
 
 
 
-STATIC_ROOT = ''
+#STATIC_ROOT = ''
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = ( os.path.join('static'), )
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "staticfiles"), ]
+
+#STATICFILES_DIRS = ( os.path.join('static'), )
+#STATICFILES_DIRS = [
+#    BASE_DIR / "static",
+#    '/var/www/vaultspj/static/',
+#]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
+#logging setup
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/var/www/vaultspj/logs/debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
